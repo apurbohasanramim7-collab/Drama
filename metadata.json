@@ -1,0 +1,7 @@
+{
+  "name": "DramaStream OTT",
+  "description": "A premium ad-supported drama streaming platform with rewarded unlocks and cinematic UI.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
