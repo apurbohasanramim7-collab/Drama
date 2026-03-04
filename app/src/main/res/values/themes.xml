@@ -1,0 +1,6 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.DramaStream" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:statusBarColor">#0A0502</item>
+        <item name="android:navigationBarColor">#0A0502</item>
+    </style>
+</resources>
