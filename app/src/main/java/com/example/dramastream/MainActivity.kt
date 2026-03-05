@@ -22,9 +22,13 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         
-        // Initialize Start.io SDK
-        StartAppSDK.init(this, "YOUR_STARTAPP_APP_ID", true)
-        StartAppAd.disableSplash()
+        // Initialize Start.io SDK with a numeric placeholder
+        try {
+            StartAppSDK.init(this, "200000000", true)
+            StartAppAd.disableSplash()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
 
         setContent {
             DramaStreamTheme {

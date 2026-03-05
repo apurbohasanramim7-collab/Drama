@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 
+@OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
 @Composable
 fun DetailScreen(dramaId: String, onBack: () -> Unit, onEpisodeClick: (String, Int) -> Unit) {
     val episodes = (1..20).toList()
@@ -28,7 +29,7 @@ fun DetailScreen(dramaId: String, onBack: () -> Unit, onEpisodeClick: (String, I
 
     Scaffold(
         topBar = {
-            SmallTopAppBar(
+            TopAppBar(
                 title = { Text("Drama Details") },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
@@ -71,6 +72,7 @@ fun DetailScreen(dramaId: String, onBack: () -> Unit, onEpisodeClick: (String, I
     }
 }
 
+@OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
 @Composable
 fun EpisodeItem(number: Int, isFree: Boolean, onClick: () -> Unit) {
     Card(
@@ -83,7 +85,7 @@ fun EpisodeItem(number: Int, isFree: Boolean, onClick: () -> Unit) {
     ) {
         Row(
             modifier = Modifier.padding(12.dp),
-            verticalAlignment = Alignment.CenterCenter
+            verticalAlignment = Alignment.CenterVertically
         ) {
             Box(
                 modifier = Modifier
